@@ -5,6 +5,7 @@ use db_pizzaria_legal;
 CREATE TABLE tb_categorias(
 id bigint AUTO_INCREMENT,
 nome_categorias varchar(255) NOT NULL,
+descricao varchar(200),
 PRIMARY KEY (id)
 );
 
@@ -19,11 +20,11 @@ PRIMARY KEY (id),
 FOREIGN KEY (categorias_id) REFERENCES tb_categorias(id)
 );
 
-insert into tb_categorias(nome_categorias) values ("Doce");
-insert into tb_categorias(nome_categorias) values ("Salgada");
-insert into tb_categorias(nome_categorias) values ("Especiais");
-insert into tb_categorias(nome_categorias) values ("Vegetariana");
-insert into tb_categorias(nome_categorias) values ("Sem Gluten");
+insert into tb_categorias(nome_categorias, descricao) values ("Doce","Pizzas doces");
+insert into tb_categorias(nome_categorias, descricao) values ("Salgada", "Pizzas salgadas");
+insert into tb_categorias(nome_categorias, descricao) values ("Especiais", "Pizzas diferentes das tradicionais");
+insert into tb_categorias(nome_categorias, descricao) values ("Vegetariana", "Pizzas para veganos");
+insert into tb_categorias(nome_categorias, descricao) values ("Sem Gluten", "Pizzas com massas sem gluten");
 
 select * from tb_categorias;
 
