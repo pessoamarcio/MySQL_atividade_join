@@ -5,6 +5,7 @@ use db_farmacia_bem_estar;
 CREATE TABLE tb_categorias(
 id bigint AUTO_INCREMENT,
 nome_categorias varchar(255) NOT NULL,
+descricao varchar(200),
 PRIMARY KEY (id)
 );
 
@@ -19,11 +20,11 @@ PRIMARY KEY (id),
 FOREIGN KEY (categorias_id) REFERENCES tb_categorias(id)
 );
 
-insert into tb_categorias(nome_categorias) values ("Remédio");
-insert into tb_categorias(nome_categorias) values ("Limpeza bocal");
-insert into tb_categorias(nome_categorias) values ("Mamãe/bebê");
-insert into tb_categorias(nome_categorias) values ("Anticoncepcionais");
-insert into tb_categorias(nome_categorias) values ("Medicamentos Alto Custo");
+insert into tb_categorias(nome_categorias, descricao) values ("Remédio", "Medicamentos de variadas marcas");
+insert into tb_categorias(nome_categorias, descricao) values ("Limpeza bocal", "Para limpeza da boca");
+insert into tb_categorias(nome_categorias, descricao) values ("Mamãe/bebê", "Itens para mamães e bebês");
+insert into tb_categorias(nome_categorias, descricao) values ("Anticoncepcionais", "Para evitar uma supresa");
+insert into tb_categorias(nome_categorias, descricao) values ("Medicamentos Alto Custo", "Medicamentos esperciais");
 
 select * from tb_categorias;
 
