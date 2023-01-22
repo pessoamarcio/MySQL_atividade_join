@@ -45,3 +45,6 @@ select * from tb_personagem where nome_personagem like "%c%";
 
 select * from tb_personagem inner join tb_classes
 on tb_personagem.classes_id = tb_classes.id;
+
+select * from tb_personagem inner join tb_classes
+on tb_personagem.classes_id = tb_classes.id where tb_classes.nome_classes  = "Warrior";
