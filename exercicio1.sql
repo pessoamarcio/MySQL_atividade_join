@@ -5,6 +5,7 @@ use db_generation_game_online;
 CREATE TABLE tb_classes(
 id bigint AUTO_INCREMENT,
 nome_classes varchar(255) NOT NULL,
+descricao varchar(100),
 PRIMARY KEY (id)
 );
 
@@ -19,11 +20,11 @@ PRIMARY KEY (id),
 FOREIGN KEY (classes_id) REFERENCES tb_classes(id)
 );
 
-insert into tb_classes(nome_classes) values ("Warrior");
-insert into tb_classes(nome_classes) values ("Mage");
-insert into tb_classes(nome_classes) values ("Assassin");
-insert into tb_classes(nome_classes) values ("Archer");
-insert into tb_classes(nome_classes) values ("Druid");
+insert into tb_classes(nome_classes, descricao) values ("Warrior", "Classe física");
+insert into tb_classes(nome_classes, descricao) values ("Mage", "Classe magica");
+insert into tb_classes(nome_classes, descricao) values ("Assassin", "Classe de agilidade");
+insert into tb_classes(nome_classes, descricao) values ("Archer", "Classe de Agilidade com arcos");
+insert into tb_classes(nome_classes, descricao) values ("Druid", "Classe que ultiliza animais");
 
 select * from tb_classes;
 
